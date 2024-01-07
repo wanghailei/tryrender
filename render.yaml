@@ -2,13 +2,13 @@ databases:
   - name: tryrender
     databaseName: tryrender
     user: tryrender
-    plan: starter
+    plan: free
 
 services:
   - type: web
     name: tryrender
     runtime: ruby
-    plan: starter
+    plan: free
     buildCommand: "./bin/render-build.sh"
     preDeployCommand: "./bin/rails db:migrate" # preDeployCommand only available on paid instance types
     startCommand: "./bin/rails server"
